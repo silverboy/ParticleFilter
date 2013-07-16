@@ -24,12 +24,16 @@ void  CRangeBearingParticleFilter::prediction_and_update_pfStandardProposal(
 {
 	size_t i,N = m_particles.size();
 
+	cout << mean << " " << std << " " << std_w << " " << dx << " " << dy << endl;
+
 	// Particle update:
 	for (i=0;i<N;i++)
 	{
-		m_particles[i].d->x += randomGenerator.drawGaussian1D(mean,std);
-		m_particles[i].d->y += randomGenerator.drawGaussian1D(mean,std);
+		//m_particles[i].d->x +=dx + (2*(rand()%2)-1)*randomGenerator.drawGaussian1D(mean,std);
+		//m_particles[i].d->y +=dy + (2*(rand()%2)-1)*randomGenerator.drawGaussian1D(mean,std);
 
+		m_particles[i].d->x +=dx + randomGenerator.drawGaussian1D(0,std);
+		m_particles[i].d->y +=dy + randomGenerator.drawGaussian1D(0,std);
 	}
 
 	CObservation2DRangeScanPtr obs = observation->getObservationByClass<CObservation2DRangeScan>();
@@ -38,13 +42,18 @@ void  CRangeBearingParticleFilter::prediction_and_update_pfStandardProposal(
 	float obsX = obs->scan[0];
 	float obsY = obs->scan[1];
 
+	cout << "Observacion: " << obsX << "  " << obsY << endl;
+
 	// Update weights
 	for (i=0;i<N;i++)
 	{
 		float distance   = sqrt( square(m_particles[i].d->x - obsX) + square(m_particles[i].d->y - obsY));
 
 		m_particles[i].log_w +=
-			log( math::normalPDF( distance, 0, std ) );
+			log( math::normalPDF( distance, 0, std_w ) );
+
+		cout << "Peso ( " << i << " ): " << m_particles[i].log_w <<
+				"  x: " << m_particles[i].d->x << "  y: " << m_particles[i].d->y << endl;
 
 	}
 
@@ -90,10 +99,19 @@ void CRangeBearingParticleFilter::getMean( double &x, double &y)
 	}
 }
 
-void CRangeBearingParticleFilter::setGaussianParams(double mean,double std){
+void CRangeBearingParticleFilter::setGaussianParams(double mean,double std, double std_w){
 
 	this->mean=mean;
 	this->std=std;
+	this->std_w=std_w;
+
+
+}
+
+void CRangeBearingParticleFilter::setDisplacement(double dx, double dy){
+
+	this->dx=dx;
+	this->dy=dy;
 
 
 }
@@ -101,6 +119,10 @@ void CRangeBearingParticleFilter::setGaussianParams(double mean,double std){
 Tracker::Tracker(){
 
 	randomGenerator.randomize();
+
+	PF_options=CParticleFilter::TParticleFilterOptions();
+	particles=CRangeBearingParticleFilter();
+	PF=CParticleFilter();
 
 	PF_options.adaptiveSampleSize = false;
 	PF_options.PF_algorithm = CParticleFilter::pfStandardProposal;
@@ -110,9 +132,12 @@ Tracker::Tracker(){
 
 	CConfigFile config("../CONFIG_Measure.ini");
 
+
 	double mean=config.read_double("PF","MEAN",0.1,false);
 	double std=config.read_double("PF","STD",0.05,false);
-	particles.setGaussianParams(mean,std);
+	double std_w=config.read_double("PF","STD_W",0.2,false);
+	particles.setGaussianParams(mean,std,std_w);
+	particles.setDisplacement(0,0);
 
 	PF.m_options = PF_options;
 }
@@ -129,7 +154,14 @@ void Tracker::inicializar(size_t numParticles,CPose2D initialPose){
 CPose2D Tracker::obtenerPosicionEstimada(CPose2D observacion,bool nuevaObservacion){
 
 	if(nuevaObservacion){
+		CPose2D d=observacion-observacionAnterior;
+		//particles.setDisplacement(d.x(),d.y());
+
 		observacionAnterior=observacion;
+	}
+	else{
+		particles.setDisplacement(0,0);
+
 	}
 
 	// Process with PF:
@@ -151,6 +183,8 @@ CPose2D Tracker::obtenerPosicionEstimada(CPose2D observacion,bool nuevaObservaci
 
 	CPose2D pose(x,y,0);
 
+	cout << "Particulas: " << particles.m_particles.size() << endl;
+
 	return pose;
 
 }
@@ -165,7 +199,10 @@ void Tracker::drawParticles(CDisplayWindowPlots *winPlot){
 		parts_y[i] = particles.m_particles[i].d->y;
 	}
 
-	winPlot->plot( parts_x, parts_y, "b.2", "particles" );
+	winPlot->plot( parts_x, parts_y, "b.1", "particles" );
+
+	cout << parts_x.size() << endl;
+	cout << parts_y.size() << endl;
 
 }
 

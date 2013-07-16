@@ -14,7 +14,7 @@
 #include <mrpt/gui.h>
 #include <mrpt/obs.h>
 
-#include <mrpt/bayes/CKalmanFilterCapable.h>
+#include <mrpt/bayes/CParticleFilter.h>
 
 using namespace mrpt;
 using namespace mrpt::bayes;
@@ -43,7 +43,9 @@ class CRangeBearingParticleFilter : public mrpt::bayes::CParticleFilterCapable, 
 private:
 	double mean;
 	double std;
-
+	double std_w;
+	double dx;
+	double dy;
 
 
 public:
@@ -69,7 +71,9 @@ public:
    	  */
 	void getMean( double &x, double &y);
 
-	void setGaussianParams(double mean,double std);
+	void setGaussianParams(double mean,double std, double std_w);
+
+	void setDisplacement(double dx, double dy);
 
 };
 

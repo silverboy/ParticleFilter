@@ -74,7 +74,6 @@ int main( int argc, const char* argv[] )
 
 		detector.abrirFichero(nombre,false);
 
-		cout << "Tiempo apertura fichero (ms): " << timer.Tac()*1000 << endl;
 
 		// Medidas
 		puntos=detector.getPuntos();
@@ -84,8 +83,6 @@ int main( int argc, const char* argv[] )
 
 
 		vector<Cluster> piernas=detector.clusterizar(0.1,3);;
-
-		cout << "Tiempo hasta hough y clusterizar (ms): " << timer.Tac()*1000 << endl;
 
 		mx.clear();
 		my.clear();
@@ -108,8 +105,6 @@ int main( int argc, const char* argv[] )
 
 		}
 
-		cout << "Tiempo hasta dibujar lineas (ms): " << timer.Tac()*1000 << endl;
-
 
 		clusterPlot.clear();
 		clusterPlot.setWindowTitle("Cluster - " + fileName.substr(fileName.find_last_of("/")+1));
@@ -129,6 +124,7 @@ int main( int argc, const char* argv[] )
 		string formato[2];
 		formato[0]=".r2";
 		formato[1]=".b2";
+		int f=0;
 
 		for(int j=0;j < piernas.size();j++){
 
@@ -141,7 +137,7 @@ int main( int argc, const char* argv[] )
 				px.push_back(puntos->at(k).x());
 				py.push_back(puntos->at(k).y());
 			}
-			clusterPlot.plot(px,py,formato[j%2]);
+			clusterPlot.plot(px,py,formato[f%2]);
 
 			// Determinar si es pierna o no
 			instancia[0].index=1;
@@ -164,15 +160,15 @@ int main( int argc, const char* argv[] )
 				piernas.erase(piernas.begin()+j);
 				j--;
 			}
+			f++;
 
 		}
 
-		cout << "Tiempo hasta clasificar piernas (ms): " << timer.Tac()*1000 << endl;
 
 		vector<CPose2D> personas=detector.buscarPersonas(piernas);
 		cout << "Personas detectadas: " << personas.size() << endl;
 
-		cout << "Tiempo hasta buscar personas (ms): " << timer.Tac()*1000 << endl;
+
 
 		detector.printClusters(piernas);
 		px.clear();
@@ -199,7 +195,7 @@ int main( int argc, const char* argv[] )
 		else{
 			CPose2D objetivo;
 			// Filtro ya inicializado
-			if(!personas.empty()){
+			if(personas.empty()){
 				// No se ha detectado persona
 				objetivo=seguidor.obtenerPosicionEstimada(CPose2D(),false);
 			}
@@ -218,11 +214,12 @@ int main( int argc, const char* argv[] )
 
 
 
-		medidasPlot.axis(-0.5,3,-3,3);
+		medidasPlot.axis(-0.5,4,-4,4);
 		clusterPlot.axis(-0.5,3,-3,3);
 		piernasPlot.axis(-0.5,3,-3,3);
 		personasPlot.axis(-0.5,3,-3,3);
 
+		cout << "Tiempo total (ms): " << timer.Tac()*1000 << endl;
 
 
 		cout << "Presione cualquier tecla para pasar a la siguiente muestra" << endl;
