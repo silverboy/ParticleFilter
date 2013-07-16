@@ -24,17 +24,18 @@
 								<option id="gnu.cpp.compiler.exe.debug.option.optimization.level.910116373" name="Optimization Level" superClass="gnu.cpp.compiler.exe.debug.option.optimization.level" value="gnu.cpp.compiler.optimization.level.none" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.exe.debug.option.debugging.level.715023654" name="Debug Level" superClass="gnu.cpp.compiler.exe.debug.option.debugging.level" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.include.paths.1357352902" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="/usr/include/mrpt/base/include/"/>
-									<listOptionValue builtIn="false" value="/usr/include/mrpt/mrpt-config/"/>
-									<listOptionValue builtIn="false" value="/usr/include/mrpt/bayes/include/"/>
-									<listOptionValue builtIn="false" value="/usr/include/mrpt/gui/include/"/>
-									<listOptionValue builtIn="false" value="/usr/include/mrpt/opengl/include/"/>
-									<listOptionValue builtIn="false" value="/usr/include/mrpt/maps/include/"/>
-									<listOptionValue builtIn="false" value="/usr/include/mrpt/obs/include/"/>
-									<listOptionValue builtIn="false" value="/usr/include/mrpt/slam/include/"/>
-									<listOptionValue builtIn="false" value="/usr/include/mrpt/graphs/include/"/>
-									<listOptionValue builtIn="false" value="/usr/include/mrpt/vision/include/"/>
-									<listOptionValue builtIn="false" value="/usr/include/mrpt/scanmatching/include/"/>
+									<listOptionValue builtIn="false" value="/usr/local/include/mrpt/base/include/"/>
+									<listOptionValue builtIn="false" value="../include"/>
+									<listOptionValue builtIn="false" value="/usr/local/include/mrpt/mrpt-config/"/>
+									<listOptionValue builtIn="false" value="/usr/local/include/mrpt/bayes/include/"/>
+									<listOptionValue builtIn="false" value="/usr/local/include/mrpt/gui/include/"/>
+									<listOptionValue builtIn="false" value="/usr/local/include/mrpt/opengl/include/"/>
+									<listOptionValue builtIn="false" value="/usr/local/include/mrpt/maps/include/"/>
+									<listOptionValue builtIn="false" value="/usr/local/include/mrpt/obs/include/"/>
+									<listOptionValue builtIn="false" value="/usr/local/include/mrpt/slam/include/"/>
+									<listOptionValue builtIn="false" value="/usr/local/include/mrpt/graphs/include/"/>
+									<listOptionValue builtIn="false" value="/usr/local/include/mrpt/vision/include/"/>
+									<listOptionValue builtIn="false" value="/usr/local/include/mrpt/scanmatching/include/"/>
 								</option>
 								<option id="gnu.cpp.compiler.option.other.other.575908319" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-c -fmessage-length=0 -fpermissive -Wno-enum-compare" valueType="string"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.2059772431" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
@@ -43,23 +44,25 @@
 								<option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.exe.debug.option.optimization.level.560419833" name="Optimization Level" superClass="gnu.c.compiler.exe.debug.option.optimization.level" valueType="enumerated"/>
 								<option id="gnu.c.compiler.exe.debug.option.debugging.level.698369927" name="Debug Level" superClass="gnu.c.compiler.exe.debug.option.debugging.level" value="gnu.c.debugging.level.max" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.include.paths.1441108549" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="/usr/include/mrpt/base/include/"/>
-									<listOptionValue builtIn="false" value="/usr/include/mrpt/mrpt-config/"/>
-									<listOptionValue builtIn="false" value="/usr/include/mrpt/bayes/include/"/>
-									<listOptionValue builtIn="false" value="/usr/include/mrpt/gui/include/"/>
-									<listOptionValue builtIn="false" value="/usr/include/mrpt/opengl/include/"/>
-									<listOptionValue builtIn="false" value="/usr/include/mrpt/maps/include/"/>
-									<listOptionValue builtIn="false" value="/usr/include/mrpt/obs/include/"/>
-									<listOptionValue builtIn="false" value="/usr/include/mrpt/slam/include/"/>
-									<listOptionValue builtIn="false" value="/usr/include/mrpt/graphs/include/"/>
-									<listOptionValue builtIn="false" value="/usr/include/mrpt/vision/include/"/>
-									<listOptionValue builtIn="false" value="/usr/include/mrpt/scanmatching/include/"/>
+									<listOptionValue builtIn="false" value="/usr/local/include/mrpt/base/include/"/>
+									<listOptionValue builtIn="false" value="/usr/local/include/mrpt/mrpt-config/"/>
+									<listOptionValue builtIn="false" value="/usr/local/include/mrpt/bayes/include/"/>
+									<listOptionValue builtIn="false" value="/usr/local/include/mrpt/gui/include/"/>
+									<listOptionValue builtIn="false" value="/usr/local/include/mrpt/opengl/include/"/>
+									<listOptionValue builtIn="false" value="/usr/local/include/mrpt/maps/include/"/>
+									<listOptionValue builtIn="false" value="/usr/local/include/mrpt/obs/include/"/>
+									<listOptionValue builtIn="false" value="/usr/local/include/mrpt/slam/include/"/>
+									<listOptionValue builtIn="false" value="/usr/local/include/mrpt/graphs/include/"/>
+									<listOptionValue builtIn="false" value="/usr/local/include/mrpt/vision/include/"/>
+									<listOptionValue builtIn="false" value="/usr/local/include/mrpt/scanmatching/include/"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1003446602" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.linker.exe.debug.1917099593" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.exe.debug"/>
 							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug.26433056" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug">
-								<option id="gnu.cpp.link.option.paths.1514559665" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths"/>
+								<option id="gnu.cpp.link.option.paths.1514559665" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
+									<listOptionValue builtIn="false" value="/usr/local/lib"/>
+								</option>
 								<option id="gnu.cpp.link.option.libs.1717893672" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
 									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="mrpt-base"/>
 									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="mrpt-bayes"/>
@@ -88,24 +91,28 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
+					<sourceEntries>
+						<entry excluding="src/FiltroParticulas.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+					</sourceEntries>
 				</configuration>
 			</storageModule>
 			<storageModule moduleId="org.eclipse.cdt.core.externalSettings">
 				<externalSettings containerId="org.eclipse.cdt.managedbuilder.pkgconfig.extSettings" factoryId="org.eclipse.cdt.core.extension.container.factory">
 					<externalSetting contentTypes="org.eclipse.cdt.core.cSource:org.eclipse.cdt.core.cxxSource">
-						<entry flags="BUILTIN" kind="includePath" name="/usr/include/mrpt/base/include/"/>
-						<entry flags="BUILTIN" kind="includePath" name="/usr/include/mrpt/mrpt-config/"/>
-						<entry flags="BUILTIN" kind="includePath" name="/usr/include/mrpt/bayes/include/"/>
-						<entry flags="BUILTIN" kind="includePath" name="/usr/include/mrpt/gui/include/"/>
-						<entry flags="BUILTIN" kind="includePath" name="/usr/include/mrpt/opengl/include/"/>
-						<entry flags="BUILTIN" kind="includePath" name="/usr/include/mrpt/maps/include/"/>
-						<entry flags="BUILTIN" kind="includePath" name="/usr/include/mrpt/obs/include/"/>
-						<entry flags="BUILTIN" kind="includePath" name="/usr/include/mrpt/slam/include/"/>
-						<entry flags="BUILTIN" kind="includePath" name="/usr/include/mrpt/graphs/include/"/>
-						<entry flags="BUILTIN" kind="includePath" name="/usr/include/mrpt/vision/include/"/>
-						<entry flags="BUILTIN" kind="includePath" name="/usr/include/mrpt/scanmatching/include/"/>
+						<entry flags="BUILTIN" kind="includePath" name="/usr/local/include/mrpt/base/include/"/>
+						<entry flags="BUILTIN" kind="includePath" name="/usr/local/include/mrpt/mrpt-config/"/>
+						<entry flags="BUILTIN" kind="includePath" name="/usr/local/include/mrpt/bayes/include/"/>
+						<entry flags="BUILTIN" kind="includePath" name="/usr/local/include/mrpt/gui/include/"/>
+						<entry flags="BUILTIN" kind="includePath" name="/usr/local/include/mrpt/opengl/include/"/>
+						<entry flags="BUILTIN" kind="includePath" name="/usr/local/include/mrpt/maps/include/"/>
+						<entry flags="BUILTIN" kind="includePath" name="/usr/local/include/mrpt/obs/include/"/>
+						<entry flags="BUILTIN" kind="includePath" name="/usr/local/include/mrpt/slam/include/"/>
+						<entry flags="BUILTIN" kind="includePath" name="/usr/local/include/mrpt/graphs/include/"/>
+						<entry flags="BUILTIN" kind="includePath" name="/usr/local/include/mrpt/vision/include/"/>
+						<entry flags="BUILTIN" kind="includePath" name="/usr/local/include/mrpt/scanmatching/include/"/>
 					</externalSetting>
 					<externalSetting contentTypes="org.eclipse.cdt.managedbuilder.core.compiledObjectFile">
+						<entry flags="RESOLVED" kind="libraryPath" name="/usr/local/lib"/>
 						<entry flags="UNDEFINED" kind="libraryFile" name="mrpt-base" srcPrefixMapping="" srcRootPath=""/>
 						<entry flags="UNDEFINED" kind="libraryFile" name="mrpt-bayes" srcPrefixMapping="" srcRootPath=""/>
 						<entry flags="UNDEFINED" kind="libraryFile" name="mrpt-gui" srcPrefixMapping="" srcRootPath=""/>
@@ -162,9 +169,139 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
+					<sourceEntries>
+						<entry excluding="src/FiltroParticulas.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+					</sourceEntries>
 				</configuration>
 			</storageModule>
 			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+		<cconfiguration id="cdt.managedbuild.config.gnu.exe.debug.142157110.947332916">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.exe.debug.142157110.947332916" moduleId="org.eclipse.cdt.core.settings" name="MiFiltro">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug,org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe" cleanCommand="rm -rf" description="Prueba del filtro de partículas implementado para nuestro caso" id="cdt.managedbuild.config.gnu.exe.debug.142157110.947332916" name="MiFiltro" parent="cdt.managedbuild.config.gnu.exe.debug">
+					<folderInfo id="cdt.managedbuild.config.gnu.exe.debug.142157110.947332916." name="/" resourcePath="">
+						<toolChain id="cdt.managedbuild.toolchain.gnu.exe.debug.1162549189" name="Linux GCC" superClass="cdt.managedbuild.toolchain.gnu.exe.debug">
+							<targetPlatform id="cdt.managedbuild.target.gnu.platform.exe.debug.995770882" name="Debug Platform" superClass="cdt.managedbuild.target.gnu.platform.exe.debug"/>
+							<builder buildPath="${workspace_loc:/ParticleFilter}/Debug" id="cdt.managedbuild.target.gnu.builder.exe.debug.1879855381" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Gnu Make Builder" superClass="cdt.managedbuild.target.gnu.builder.exe.debug"/>
+							<tool id="cdt.managedbuild.tool.gnu.archiver.base.1958277199" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.base"/>
+							<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.2046674885" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug">
+								<option id="gnu.cpp.compiler.exe.debug.option.optimization.level.1972287421" name="Optimization Level" superClass="gnu.cpp.compiler.exe.debug.option.optimization.level" value="gnu.cpp.compiler.optimization.level.none" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.exe.debug.option.debugging.level.254679768" name="Debug Level" superClass="gnu.cpp.compiler.exe.debug.option.debugging.level" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.include.paths.1869577669" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="/usr/local/include/mrpt/base/include/"/>
+									<listOptionValue builtIn="false" value="../include"/>
+									<listOptionValue builtIn="false" value="/usr/local/include/mrpt/mrpt-config/"/>
+									<listOptionValue builtIn="false" value="/usr/local/include/mrpt/bayes/include/"/>
+									<listOptionValue builtIn="false" value="/usr/local/include/mrpt/gui/include/"/>
+									<listOptionValue builtIn="false" value="/usr/local/include/mrpt/opengl/include/"/>
+									<listOptionValue builtIn="false" value="/usr/local/include/mrpt/maps/include/"/>
+									<listOptionValue builtIn="false" value="/usr/local/include/mrpt/obs/include/"/>
+									<listOptionValue builtIn="false" value="/usr/local/include/mrpt/slam/include/"/>
+									<listOptionValue builtIn="false" value="/usr/local/include/mrpt/graphs/include/"/>
+									<listOptionValue builtIn="false" value="/usr/local/include/mrpt/vision/include/"/>
+									<listOptionValue builtIn="false" value="/usr/local/include/mrpt/scanmatching/include/"/>
+								</option>
+								<option id="gnu.cpp.compiler.option.other.other.1890003575" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-c -fmessage-length=0 -fpermissive -Wno-enum-compare" valueType="string"/>
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.656290727" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.c.compiler.exe.debug.1134705372" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.debug">
+								<option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.exe.debug.option.optimization.level.358633153" name="Optimization Level" superClass="gnu.c.compiler.exe.debug.option.optimization.level" valueType="enumerated"/>
+								<option id="gnu.c.compiler.exe.debug.option.debugging.level.1639819326" name="Debug Level" superClass="gnu.c.compiler.exe.debug.option.debugging.level" value="gnu.c.debugging.level.max" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.include.paths.1713133724" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="/usr/local/include/mrpt/base/include/"/>
+									<listOptionValue builtIn="false" value="/usr/local/include/mrpt/mrpt-config/"/>
+									<listOptionValue builtIn="false" value="/usr/local/include/mrpt/bayes/include/"/>
+									<listOptionValue builtIn="false" value="/usr/local/include/mrpt/gui/include/"/>
+									<listOptionValue builtIn="false" value="/usr/local/include/mrpt/opengl/include/"/>
+									<listOptionValue builtIn="false" value="/usr/local/include/mrpt/maps/include/"/>
+									<listOptionValue builtIn="false" value="/usr/local/include/mrpt/obs/include/"/>
+									<listOptionValue builtIn="false" value="/usr/local/include/mrpt/slam/include/"/>
+									<listOptionValue builtIn="false" value="/usr/local/include/mrpt/graphs/include/"/>
+									<listOptionValue builtIn="false" value="/usr/local/include/mrpt/vision/include/"/>
+									<listOptionValue builtIn="false" value="/usr/local/include/mrpt/scanmatching/include/"/>
+								</option>
+								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1198295407" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.c.linker.exe.debug.1076430952" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.exe.debug"/>
+							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug.548579141" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug">
+								<option id="gnu.cpp.link.option.paths.1703715356" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
+									<listOptionValue builtIn="false" value="/usr/local/lib"/>
+								</option>
+								<option id="gnu.cpp.link.option.libs.1801436561" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="mrpt-base"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="mrpt-bayes"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="mrpt-gui"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="mrpt-opengl"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="mrpt-maps"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="mrpt-obs"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="mrpt-slam"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="mrpt-graphs"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="mrpt-vision"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="mrpt-scanmatching"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="mrpt-base"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="mrpt-bayes"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="mrpt-gui"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="mrpt-opengl"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="mrpt-maps"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="mrpt-obs"/>
+								</option>
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1773479520" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.assembler.exe.debug.2117849132" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.exe.debug">
+								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.999553269" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
+							</tool>
+						</toolChain>
+					</folderInfo>
+					<sourceEntries>
+						<entry excluding="src/test.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+					</sourceEntries>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings">
+				<externalSettings containerId="org.eclipse.cdt.managedbuilder.pkgconfig.extSettings" factoryId="org.eclipse.cdt.core.extension.container.factory">
+					<externalSetting contentTypes="org.eclipse.cdt.core.cSource:org.eclipse.cdt.core.cxxSource">
+						<entry flags="BUILTIN" kind="includePath" name="/usr/local/include/mrpt/base/include/"/>
+						<entry flags="BUILTIN" kind="includePath" name="/usr/local/include/mrpt/mrpt-config/"/>
+						<entry flags="BUILTIN" kind="includePath" name="/usr/local/include/mrpt/bayes/include/"/>
+						<entry flags="BUILTIN" kind="includePath" name="/usr/local/include/mrpt/gui/include/"/>
+						<entry flags="BUILTIN" kind="includePath" name="/usr/local/include/mrpt/opengl/include/"/>
+						<entry flags="BUILTIN" kind="includePath" name="/usr/local/include/mrpt/maps/include/"/>
+						<entry flags="BUILTIN" kind="includePath" name="/usr/local/include/mrpt/obs/include/"/>
+						<entry flags="BUILTIN" kind="includePath" name="/usr/local/include/mrpt/slam/include/"/>
+						<entry flags="BUILTIN" kind="includePath" name="/usr/local/include/mrpt/graphs/include/"/>
+						<entry flags="BUILTIN" kind="includePath" name="/usr/local/include/mrpt/vision/include/"/>
+						<entry flags="BUILTIN" kind="includePath" name="/usr/local/include/mrpt/scanmatching/include/"/>
+					</externalSetting>
+					<externalSetting contentTypes="org.eclipse.cdt.managedbuilder.core.compiledObjectFile">
+						<entry flags="RESOLVED" kind="libraryPath" name="/usr/local/lib"/>
+						<entry flags="UNDEFINED" kind="libraryFile" name="mrpt-base" srcPrefixMapping="" srcRootPath=""/>
+						<entry flags="UNDEFINED" kind="libraryFile" name="mrpt-bayes" srcPrefixMapping="" srcRootPath=""/>
+						<entry flags="UNDEFINED" kind="libraryFile" name="mrpt-gui" srcPrefixMapping="" srcRootPath=""/>
+						<entry flags="UNDEFINED" kind="libraryFile" name="mrpt-opengl" srcPrefixMapping="" srcRootPath=""/>
+						<entry flags="UNDEFINED" kind="libraryFile" name="mrpt-maps" srcPrefixMapping="" srcRootPath=""/>
+						<entry flags="UNDEFINED" kind="libraryFile" name="mrpt-obs" srcPrefixMapping="" srcRootPath=""/>
+						<entry flags="UNDEFINED" kind="libraryFile" name="mrpt-slam" srcPrefixMapping="" srcRootPath=""/>
+						<entry flags="UNDEFINED" kind="libraryFile" name="mrpt-graphs" srcPrefixMapping="" srcRootPath=""/>
+						<entry flags="UNDEFINED" kind="libraryFile" name="mrpt-vision" srcPrefixMapping="" srcRootPath=""/>
+						<entry flags="UNDEFINED" kind="libraryFile" name="mrpt-scanmatching" srcPrefixMapping="" srcRootPath=""/>
+					</externalSetting>
+				</externalSettings>
+			</storageModule>
+			<storageModule Qt="false" Qt3Support="false" QtCLucene="false" QtCore="false" QtDBus="false" QtDeclarative="false" QtDesigner="false" QtDesignerComponents="false" QtGui="false" QtHelp="false" QtMultimedia="false" QtNetwork="false" QtOpenGL="false" QtScript="false" QtScriptTools="false" QtSql="false" QtSvg="false" QtTest="false" QtUiTools="false" QtXml="false" QtXmlPatterns="false" atk="false" bash-completion="false" bigreqsproto="false" cairo="false" cairo-fc="false" cairo-ft="false" cairo-pdf="false" cairo-png="false" cairo-ps="false" cairo-svg="false" cairo-tee="false" cairo-xlib="false" cairo-xlib-xrender="false" cb_wxKWIC="false" cb_wxchartctrl="false" cb_wxcontrib="false" cb_wxcustombutton="false" cb_wxflatnotebook="false" cb_wximagepanel="false" cb_wxled="false" cb_wxspeedbutton="false" cb_wxtreelist="false" codeblocks="false" compositeproto="false" damageproto="false" dmxproto="false" dri="false" dri2proto="false" evieproto="false" fixesproto="false" fontconfig="false" fontsproto="false" fontutil="false" freetype2="false" gail="false" gdk-2.0="false" gdk-pixbuf-2.0="false" gdk-pixbuf-xlib-2.0="false" gdk-x11-2.0="false" gio-2.0="false" gio-unix-2.0="false" gl="false" glib-2.0="false" glproto="false" glu="false" gmodule-2.0="false" gmodule-export-2.0="false" gmodule-no-export-2.0="false" gnome-icon-theme="false" gnome-python-desktop-2.0="false" gobject-2.0="false" gthread-2.0="false" gtkplus-2.0="false" gtkplus-unix-print-2.0="false" gtkplus-x11-2.0="false" ice="false" inputproto="false" kbproto="false" libdrm="false" libdrm_intel="false" libdrm_nouveau="false" libdrm_nouveau2="false" libdrm_radeon="false" libkms="false" libpng="false" libpng15="false" libusb-1.0="false" moduleId="packages" mrpt-base="true" mrpt-bayes="true" mrpt-detectors="false" mrpt-graphs="false" mrpt-graphslam="false" mrpt-gui="true" mrpt-hmtslam="false" mrpt-hwdrivers="false" mrpt-maps="true" mrpt-obs="false" mrpt-opengl="false" mrpt-reactivenav="false" mrpt-scanmatching="false" mrpt-slam="true" mrpt-topography="false" mrpt-vision="false" netapi="false" notify-python="false" opencv="false" pango="false" pangocairo="false" pangoft2="false" pangox="false" pangoxft="false" pixman-1="false" pthread-stubs="false" randrproto="false" recordproto="false" renderproto="false" resourceproto="false" scrnsaverproto="false" shared-mime-info="false" sm="false" systemd="false" udev="false" usbutils="false" videoproto="false" wxsmith="false" wxsmith-contrib="false" wxsmithaui="false" x11="false" x11-xcb="false" xau="false" xcb="false" xcb-composite="false" xcb-damage="false" xcb-dpms="false" xcb-dri2="false" xcb-glx="false" xcb-randr="false" xcb-record="false" xcb-render="false" xcb-res="false" xcb-screensaver="false" xcb-shape="false" xcb-shm="false" xcb-sync="false" xcb-xevie="false" xcb-xf86dri="false" xcb-xfixes="false" xcb-xinerama="false" xcb-xkb="false" xcb-xselinux="false" xcb-xtest="false" xcb-xv="false" xcb-xvmc="false" xcmiscproto="false" xcomposite="false" xcursor="false" xdamage="false" xext="false" xextproto="false" xf86bigfontproto="false" xf86dgaproto="false" xf86driproto="false" xf86miscproto="false" xf86vidmodeproto="false" xfixes="false" xft="false" xi="false" xinerama="false" xineramaproto="false" xproto="false" xproxymngproto="false" xrandr="false" xrender="false" xt="false" xv="false" xxf86vm="false" zlib="false"/>
 		</cconfiguration>
 	</storageModule>
 	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
@@ -194,4 +331,5 @@
 			<resource resourceType="PROJECT" workspacePath="/ParticleFilter"/>
 		</configuration>
 	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
 </cproject>
