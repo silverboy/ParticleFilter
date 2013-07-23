@@ -1,10 +1,13 @@
 /*
- * testSVM.cpp
+ * testPF.cpp
 
  *
  *  Created on: 17/06/2013
  *      Author: jplata
  */
+
+
+
 
 
 #include "Detector.h"
@@ -243,8 +246,4 @@ int main( int argc, const char* argv[] )
 
 
 }
-
-
-
-
 

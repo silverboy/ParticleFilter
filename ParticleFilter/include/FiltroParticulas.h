@@ -85,8 +85,7 @@ public:
 	void inicializar(size_t  numParticles,CPose2D initialPose);
 	CPose2D obtenerPosicionEstimada(CPose2D observacion, bool nuevaObservacion);
 	void drawParticles(CDisplayWindowPlots *plot);
-
-
+	void setGaussianParams(double mean,double std,double std_w);
 
 private:
 

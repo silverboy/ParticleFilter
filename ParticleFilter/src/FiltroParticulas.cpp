@@ -24,16 +24,15 @@ void  CRangeBearingParticleFilter::prediction_and_update_pfStandardProposal(
 {
 	size_t i,N = m_particles.size();
 
-	cout << mean << " " << std << " " << std_w << " " << dx << " " << dy << endl;
 
 	// Particle update:
 	for (i=0;i<N;i++)
 	{
-		//m_particles[i].d->x +=dx + (2*(rand()%2)-1)*randomGenerator.drawGaussian1D(mean,std);
-		//m_particles[i].d->y +=dy + (2*(rand()%2)-1)*randomGenerator.drawGaussian1D(mean,std);
+		m_particles[i].d->x +=dx + (2*(rand()%2)-1)*randomGenerator.drawGaussian1D(mean,std);
+		m_particles[i].d->y +=dy + (2*(rand()%2)-1)*randomGenerator.drawGaussian1D(mean,std);
 
-		m_particles[i].d->x +=dx + randomGenerator.drawGaussian1D(0,std);
-		m_particles[i].d->y +=dy + randomGenerator.drawGaussian1D(0,std);
+		//m_particles[i].d->x +=dx + randomGenerator.drawGaussian1D(0,std);
+		//m_particles[i].d->y +=dy + randomGenerator.drawGaussian1D(0,std);
 	}
 
 	CObservation2DRangeScanPtr obs = observation->getObservationByClass<CObservation2DRangeScan>();
@@ -42,7 +41,7 @@ void  CRangeBearingParticleFilter::prediction_and_update_pfStandardProposal(
 	float obsX = obs->scan[0];
 	float obsY = obs->scan[1];
 
-	cout << "Observacion: " << obsX << "  " << obsY << endl;
+
 
 	// Update weights
 	for (i=0;i<N;i++)
@@ -51,9 +50,6 @@ void  CRangeBearingParticleFilter::prediction_and_update_pfStandardProposal(
 
 		m_particles[i].log_w +=
 			log( math::normalPDF( distance, 0, std_w ) );
-
-		cout << "Peso ( " << i << " ): " << m_particles[i].log_w <<
-				"  x: " << m_particles[i].d->x << "  y: " << m_particles[i].d->y << endl;
 
 	}
 
@@ -155,7 +151,7 @@ CPose2D Tracker::obtenerPosicionEstimada(CPose2D observacion,bool nuevaObservaci
 
 	if(nuevaObservacion){
 		CPose2D d=observacion-observacionAnterior;
-		//particles.setDisplacement(d.x(),d.y());
+		particles.setDisplacement(d.x(),d.y());
 
 		observacionAnterior=observacion;
 	}
@@ -183,8 +179,6 @@ CPose2D Tracker::obtenerPosicionEstimada(CPose2D observacion,bool nuevaObservaci
 
 	CPose2D pose(x,y,0);
 
-	cout << "Particulas: " << particles.m_particles.size() << endl;
-
 	return pose;
 
 }
@@ -200,10 +194,10 @@ void Tracker::drawParticles(CDisplayWindowPlots *winPlot){
 	}
 
 	winPlot->plot( parts_x, parts_y, "b.1", "particles" );
+}
 
-	cout << parts_x.size() << endl;
-	cout << parts_y.size() << endl;
-
+void Tracker::setGaussianParams(double mean,double std,double std_w){
+	particles.setGaussianParams(mean,std,std_w);
 }
 
 
