@@ -32,15 +32,13 @@ int main( int argc, const char* argv[] )
 	int trayectoria=atoi(argv[1]);
 
 
-
-
 	CDisplayWindowPlots winPlot("Filtro de Particulas");
 	winPlot.hold_on();
 
 
 
 	vector<CPose2D> t_p;
-	vector<double> t_x,t_y,x,y,errores;
+	vector<double> t_x,t_y,x,y,errores,time;
 	CTicTac timer;
 
 	double px,py;
@@ -71,11 +69,12 @@ int main( int argc, const char* argv[] )
 
 	sprintf(nombre,"/home/jplata/Eclipse/MedidasPiernas/17Julio/T%i/Errores.dat",trayectoria);
 	// Fichero para almacenar errores
-	output=fopen(nombre,"w");
+	//output=fopen(nombre,"w");
 
 	// Repetir para distinto numero de particulas
 
-	int particulas[]={50,100,150,200,250};
+	//int particulas[]={50,100,150,200,250};
+	int particulas[]={200};
 
 	for(int j=0;j < sizeof(particulas)/sizeof(int); j++){
 
@@ -91,7 +90,6 @@ int main( int argc, const char* argv[] )
 		// Comprobamos error del tracker con las trayectorias almacenadas
 
 		for(int i=0;i<fin;i++){
-
 
 			sprintf(nombre,"/home/jplata/Eclipse/MedidasPiernas/17Julio/T%i/t%i_%i.dat",trayectoria,trayectoria,i);
 
@@ -164,6 +162,8 @@ int main( int argc, const char* argv[] )
 					y.push_back(objetivo.y());
 
 					winPlot.plot(x,y,".k8");
+
+					time.push_back(timer.Tac()*1000);
 				}
 			}
 
@@ -185,15 +185,25 @@ int main( int argc, const char* argv[] )
 		}
 		std=sqrt(std/(errores.size()-1));
 
+		double t_medio=0;
+		// Calcular error medio
+		for(int i=0;i < time.size(); i++){
+			t_medio+=time[i];
+		}
+		t_medio=t_medio/time.size();
+
+
+
 		cout << "Particulas: " << particulas[j] << endl;
 		cout << "Error medio: " << media << endl;
 		cout << "Std error: " << std << endl;
+		cout << "Tiempo medio: " << t_medio << endl;
 
-		fprintf(output,"%i,%0.5f,%0.5f\n",particulas[j],media,std);
+		//fprintf(output,"%i,%0.5f,%0.5f\n",particulas[j],media,std);
 
 	}
 
-	fclose(output);
+	//fclose(output);
 
 
 	cout << "Presione cualquier tecla para terminar:" << endl;
